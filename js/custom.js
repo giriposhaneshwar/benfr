@@ -2,7 +2,7 @@ $(function(e) {
     // body...
     'use strict';
 
-
+    // BX Slider Scrolling
     $('.bxSlider').bxSlider({
         minSlides: 1,
         maxSlides: 4,
@@ -18,32 +18,14 @@ $(function(e) {
     // scroll window header fix
     var headerC = $('.headerSection');
 
-    
-
-    $(document).ready(function(){
-    	
-    });
-
     $(document).scroll(function(e) {
-    	// if(e.originalEvent.wheelDelta / 120 > 0){
-    	// 	console.log("1", e);
-    	// }else{
-    	// 	console.log("0");
-    	// }
-    	// var $this = $(this);
-     //    if (headerC.scrollTop > 147) {
-     //    	console.log("reached");
-     //        headerC.addClass("navbar-fixed-top");
-     //    } else {
-     //        headerC.removeClass("navbar-fixed-top");
-     //    }
-     if($(document).scrollTop() > 50){
-    		headerC.addClass("navbar-fixed-top");
-    		$('.topMiniNav').hide();
-    	}else{
-    		headerC.removeClass("navbar-fixed-top");
-    		$('.topMiniNav').show();
-    	}
+        if ($(document).scrollTop() > 50) {
+            headerC.addClass("navbar-fixed-top");
+            $('.topMiniNav').hide();
+        } else {
+            headerC.removeClass("navbar-fixed-top");
+            $('.topMiniNav').show();
+        }
     });
 
     // Hover Image Change to Model
@@ -95,13 +77,13 @@ $(function(e) {
 
     // Product Filter
     var pFilter = $('.filterHolder');
-    pFilter.find('ul>li>a').on('click', function(e){
-    	var $this = $(this);
-    	var showEle = $('.filterOptions');
-    	var getFilter = $this.attr('data-filter');
-    	var getSiblings = $this.parent().siblings().find('a').removeClass('expand');
-    	showEle.find('.option-'+getFilter).slideToggle(500).siblings().slideUp(100);
-    	$this.toggleClass('expand');
-    	
+    pFilter.find('ul>li>a').on('click', function(e) {
+        var $this = $(this);
+        var showEle = $('.filterOptions');
+        var getFilter = $this.attr('data-filter');
+        var getSiblings = $this.parent().siblings().find('a').removeClass('expand');
+        showEle.find('.option-' + getFilter).slideToggle(500).siblings().slideUp(100);
+        $this.toggleClass('expand');
+
     })
 });
