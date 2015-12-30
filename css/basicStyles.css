@@ -1,5 +1,826 @@
-
 body {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    font-size: 14px;
+}
+
+div {
+    /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+}
+
+/* ICONS */
+.icon-facebook{
+    background: url('../images/facebook.png') no-repeat center center;
+    background-size: contain;
+}
+.icon-twitter{
+    background: url('../images/twitter.png') no-repeat center center;
+    background-size: contain;
+}
+.icon-search{
+    background: url('../images/quickViewSearch.png') no-repeat center center;
+}
+.icon-wishlist{
+    background: url('../images/wishlist.png') no-repeat center center;
+}
+.icon-cart{
+    background: url('../images/cart.png') no-repeat center center;
+}
+
+/*.addToCart {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('../images/cartBag.png') no-repeat center center;
+    background-size: contain;
+}*/
+
+/* Header Section Styles */
+
+.mainContainer {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainContainer .headerSection {
+    display: block;
+    background-color: #fff;
+}
+.headerSection .topMiniNav,
+.headerSection .logoContainer {
+    display: block;
+    border-bottom: 1px solid #efefef;
+    padding-top: 8px;
+}
+
+.headerSection .topMiniNav {
+    font-size: 13px;
+    color: #888;
+    padding-bottom: 8px;
+}
+
+.headerSection .topMiniNav .vochureDetails span {
+    border: 1px dashed #ccc;
+    padding: 3px 5px;
+}
+
+.headerSection .topMiniNav .vochureDetails span b {
+    color: #555;
+}
+
+.headerSection .topMiniNav .miniNav {
+    display: block;
+    text-align: right;
+}
+
+.headerSection .topMiniNav .miniNav ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.headerSection .topMiniNav .miniNav ul li {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    padding-right: 5px;
+}
+
+.headerSection .topMiniNav .miniNav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #888;
+}
+
+.headerSection .topMiniNav .miniNav ul li a:hover {
+    color: #555;
+}
+
+.headerSection .topMiniNav .miniNav ul li:last-child {
+    border-right: none;
+}
+
+.headerSection .logoContainer .logoHolder {
+    display: block;
+    min-width: 150px;
+    min-height: 45px;
+    background-size: contain;
+}
+span.logoHolder.logo-icon{
+    background: url('../images/logoTrans.png') no-repeat center center;    
+}
+
+
+/* NAVIGATION STYLES*/
+/*.headerSection{    
+    position: relative;
+}
+
+.headerSection .navHolder {
+    margin-top: 5px;
+}
+.headerSection .navHolder ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.headerSection .navHolder ul li {
+    display: inline-block;
+    margin-right: -3px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+}
+.headerSection .navHolder > ul > li > .subMenuContainer{
+    display: none;
+    position: absolute;
+    left: -31%;
+    z-index: 15;
+    border: 1px solid #000;
+    margin-top: 10px;
+    border-top: none;
+    background-color: #fff;
+    padding: 10px;
+}
+.headerSection .navHolder > ul > li:hover > .subMenuContainer{
+    display: block;
+}
+.headerSection .navHolder ul li a {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    padding: 12px 15px;
+}
+
+*/
+.headerSection .navHolder ul > li.active a,
+.headerSection .navHolder ul > li a:hover,
+.headerSection .navHolder .toRed a{
+    color: #c00;
+}
+
+
+.navbar{
+    margin: 0px;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border-color: transparent;
+}
+.navbar-default{
+    background-color: transparent;
+    border-color: transparent;
+}
+.navbar-brand{
+    padding: 0px;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover{
+    background-color: transparent;
+    color:#c00;
+}
+
+
+.headerSection .navHolder{
+    display: block;
+    position: relative;
+}
+.navbar-nav{
+    position: relative;
+}
+.navbar-nav>li{
+    position: static;
+}
+.headerSection .navHolder .sub-navigation{
+    display: none;
+    /*position: relative;*/
+}
+.headerSection .navHolder li:hover .sub-navigation{
+    display: block;
+    /*z-index: 1;*/
+    /*border: 1px solid #c00;*/
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container{
+    display: block;
+    position: absolute;
+    left: -166px;
+    background-color: #fff;
+    /*top: 50px;*/
+    border-top: 1px solid #ccc;
+    z-index: 11;
+    padding: 10px 15px;
+}
+.headerSection .navHolder li .sub-navigation .arrow-icon{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    z-index: 20;
+    top: 1px;
+}
+.headerSection .navHolder li .sub-navigation .arrow-icon:after, 
+.headerSection .navHolder li .sub-navigation .arrow-icon:before {
+    bottom: 0%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.headerSection .navHolder li .sub-navigation .arrow-icon:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 11px;
+    margin-left: -11px;
+}
+.headerSection .navHolder li .sub-navigation .arrow-icon:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-bottom-color: #ccc;
+    border-width: 12px;
+    margin-left: -12px;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList h3{
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #555;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul li{
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 25px;
+    max-width: 25%;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul li a{
+    display: block;
+    text-decoration: none;
+    color: #555;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul li span{
+    display: block;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul li span:first-child{
+    text-decoration: underline;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul li span a:hover{ 
+    color: #000;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul li span.toRed a{ 
+    color: #c00;
+}
+.headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList .itemCat{
+    min-height: 150px;
+}
+
+
+
+
+/* NAVIGATION STYLES END*/
+
+.headerSection .logoContainer .searchHolder {
+    display: block;
+    margin-top: 10px;
+    /*border: 1px solid #000;*/
+}
+
+.headerSection .logoContainer .searchHolder form,
+.headerSection .logoContainer .searchHolder .orderQueue {
+    display: inline-block;
+    vertical-align: middle;
+    /*border: 1px solid #000;*/
+}
+
+.headerSection .logoContainer .searchHolder form input:focus {
+    border-color: none;
+    border: none;
+}
+
+.headerSection .logoContainer .searchHolder form input {
+    width: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+    outline: none;
+    background-color: #e1e1e1;
+    border: none;
+}
+
+.headerSection .logoContainer .searchHolder .orderQueue ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.headerSection .logoContainer .searchHolder .orderQueue ul li {
+    display: inline-block;
+    margin: 0px 5px;
+}
+
+.headerSection .logoContainer .searchHolder .orderQueue ul li .wishList {
+    display: block;
+    width: 56px;
+    height: 32px;
+    background-size: contain;
+}
+
+.headerSection .addToCart.icon-cart {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+}
+.headerSection .icon-wishlist.mainWishList{
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+}
+
+/*---- Body Container -------*/
+
+.sliderContainer {
+    display: block;
+    margin-top: 5px;
+}
+.sliderContainer .col-sm-12{
+    padding: 0px;
+}
+
+.sliderContainer .slider {
+    display: block;
+    background-color: #ccc;
+    /*height: 330px;*/
+}
+
+.sliderContainer .slider ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.sliderContainer .slider ul li:nth-child(1) {
+    background-color: #DBC9B1;
+    text-align: center;
+}
+
+.sliderContainer .sliderDrive {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.sliderContainer .sliderDrive li {
+    display: inline-block;
+    width: 25%;
+    margin-right: -4px;
+    /*border: 1px solid #000;*/
+    background-color: #EEEEEE;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sliderContainer .sliderDrive li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    padding: 12px 0px;
+}
+
+.sliderContainer .sliderDrive li.active {
+    position: relative;
+    background: #ffffff;
+}
+
+.sliderContainer .sliderDrive li.active:after {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #ffffff;
+    border-width: 12px;
+    margin-left: -12px;
+}
+
+
+/* Product Listing */
+
+.productList {
+    display: block;
+}
+
+.productList .productTitle {
+    display: block;
+    border-top: 1px solid #ccc;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.productList .productTitle b {
+    display: block;
+    margin-top: -15px;
+    font-weight: normal;
+}
+
+.productList .productTitle b span {
+    padding: 5px 35px;
+    background-color: #FFC001;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+}
+.productList:nth-child(odd) .productTitle b span {
+    padding: 5px 35px;
+    background-color: #888;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #fff;
+}
+
+.productList .productItemHolder {
+    display: block;
+    margin-top: 50px;
+}
+
+.productList .productItemHolder .itemGrid {
+    /*display: inline-block;*/
+    /*min-width: 300px;*/
+}
+
+.productList .productItemHolder .itemGrid .itemDetails {
+    display: block;
+    margin: 0px 48px;
+    margin-bottom: 96px;
+}
+.productList .itemGrid .itemDetails .imgHolder{
+    display: block;
+    position: relative;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder{
+    display: block;
+    position: absolute;
+    right: -30px;
+    bottom: 0px;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li{
+    display: block;
+    margin: 8px 3px;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a{
+    text-decoration: none;
+    outline: none;
+    color: #000;
+    text-align: right;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a span,
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a i{
+    display: inline-block;
+    margin: 3px 0px;
+    float: right;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a span{
+    /*display: block;*/
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    padding: 3px 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    opacity: 0;   
+    position: relative;
+}
+
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a span:after, 
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a span:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a span:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-left-color: #ffffff;
+    border-width: 5px;
+    margin-top: -5px;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li a span:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-left-color: #ccc;
+    border-width: 6px;
+    margin-top: -6px;
+}
+
+
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li i:hover + span{
+    opacity: 1;
+}
+.productList .itemGrid .itemDetails .imgHolder .iconHolder ul li i.wished{
+    background-color: #f60;
+    opacity: 1;
+}
+.iconHolder .icon-search.wished{
+background: url('../images/quickViewHover.png') no-repeat center center;
+background-size: 65%;
+} 
+.iconHolder .icon-wishlist.wished{
+background: url('../images/wishListHover.png') no-repeat center center;
+background-size: 65%;
+} 
+.iconHolder .icon-cart.wished{
+background: url('../images/cartHover.png') no-repeat center center;
+background-size: 65%;
+} 
+.iconHolder .icon-search, 
+.iconHolder  .icon-wishlist, 
+.iconHolder  .icon-cart{
+    display: block;
+    opacity: 0.3;
+    width: 24px;
+    height: 24px;
+    margin: 4px;
+    background-size: 65%; 
+    padding: 3px;
+    border-radius: 2em;
+}
+.iconHolder  .icon-search:hover,
+.iconHolder  .icon-wishlist:hover,
+.iconHolder  .icon-cart:hover{
+    opacity: 1;
+    /*border: 1px solid #000;*/
+    background-color: #ccc;
+}
+.productList .productItemHolder .itemGrid .itemDetails .itemLabel {
+    /*display: inline-block;*/
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+.productList .itemDetails .col-xs-1,
+.productList .itemDetails .col-xs-2,
+.productList .itemDetails .col-xs-3,
+.productList .itemDetails .col-xs-4,
+.productList .itemDetails .col-xs-5,
+.productList .itemDetails .col-xs-6,
+.productList .itemDetails .col-xs-7,
+.productList .itemDetails .col-xs-8,
+.productList .itemDetails .col-xs-9,
+.productList .itemDetails .col-xs-10,
+.productList .itemDetails .col-xs-11,
+.productList .itemDetails .col-xs-12 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.productList .itemDetails .itemDiscount {
+    text-align: right;
+}
+
+.productList .itemDetails .itemRate .itemSale{
+    text-align: right;
+}
+
+.productList .itemDetails .itemDiscount b {
+    padding: 5px 8px;
+    border: 1px dashed #ccc;
+    font-weight: normal;
+}
+
+.productList .itemDetails .itemRate{
+    display: block;
+    margin: 12px 0px;
+    font-size: 12px;
+}
+.productList .itemDetails .itemRate .itemPercent{
+    text-align: center;
+    color: #c00;
+    font-weight: normal;
+}
+
+.productList .itemDetails .itemFrameColor{
+    display: block;
+    margin-top: 15px;
+}
+.productList .itemDetails .itemFrameColor ul{
+    margin: 0px auto;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+}
+.productList .itemDetails .itemFrameColor ul li{
+    display: inline-block;
+    margin: 0px 2px;
+    vertical-align: middle;
+}
+.productList .itemDetails .itemFrameColor ul li a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #555;
+    border-radius: 2em;
+    box-shadow: inset 0 0 0 3px white, 0 0 0 1px #D0D0D0;
+}
+.productList .itemDetails .itemFrameColor ul li.active a{
+    display: block;
+    width: 28px;
+    height: 28px;
+    background-color: #0A0A0A  ;
+    border-radius: 2em;
+    box-shadow: inset 0 0 0 3px #fff, 0 1px 2px 2px #888;
+}
+.productList .itemDetails .itemFrameColor ul li a:hover{
+    display: block;
+    background-color: #0A0A0A  ;
+    border-radius: 2em;
+    box-shadow: inset 0 0 0 3px #fff, 0 1px 2px 2px #888;
+}
+
+/* Product Listing BX Slider */
+.bx-wrapper .bx-viewport{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.bx-pager.bx-default-pager{
+    display: none;
+}
+/* Footer Section Styles*/
+.footerContainer{
+    display: block;
+    background-color: #000;
+    color: #fff;
+}
+.footerContainer .logoHolder{
+    display: block;
+}
+.footerContainer .logoHolder i{
+    display: block;
+    height: 150px;
+}
+.footerContainer .subscribe{
+    display: block;
+    border: 1px solid #fff;
+}
+.footerContainer .subscribe input[type="text"]{
+    display: block;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 0px;
+    /*outline: transparent;*/
+    margin: 30px 8px;
+    /*color: #fff;*/
+    font-size: 20px;
+    color: #fff;
+}
+.footerContainer .subscribe .form-control:focus{
+    border-color: transparent;
+    border: transparent;
+    outline: none;
+    box-shadow: none;
+}
+.footerContainer .subscribe button[type="button"]{
+    background-color: transparent;
+    border: none;
+    z-index: 10;
+    /*border: 1px solid #fff;*/
+}
+.footerContainer .subscribe button[type="button"] img{
+    padding: 5px;
+    width: 30px;
+}
+.footerContainer .footerNavigation{
+    display: block;
+}
+.footerContainer .footerNavigation ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.footerContainer .footerNavigation > ul > li{
+    display: block;
+    font-size: 18px;
+}
+.footerContainer .footerNavigation > ul > li a{
+    display: block;
+    padding: 8px 5px;
+    text-decoration: none;
+    color: #ccc;
+}
+.footerContainer .footerNavigation > ul > li a:hover{
+    text-decoration: underline;
+}
+.footerContainer .footerNavigation .social{
+    display: block;
+}
+.footerContainer .footerNavigation .social ul li{
+    display: inline-block;
+    margin-right: -5px;
+}
+.footerContainer .footerNavigation .social ul li a{
+    display: block;
+    padding: 8px;
+    /*border: 1px solid #fff;*/
+}
+.footerContainer .footerNavigation .social ul li a i{ 
+    display: block;   
+    width: 32px;
+    height: 32px;
+}
+
+.footerContainer .rights{
+    display: block;
+    padding-top: 20px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Product Listing Page  */
+ul.breadCrumb{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.breadCrumb > li{
+    display: inline-block;
+    padding: 8px 0px;
+}
+ul.breadCrumb > li:after{
+    content: " > ";
+}
+ul.breadCrumb > li:last-child:after{
+    content: "";
+}
+ul.breadCrumb > li a{
+    text-decoration: none;
+    color: #555;
+}
+ul.breadCrumb > li a:hover{
+    color: #000;
+}
+.productFilter{
+    display: block;
+}
+.productFilter .filterContent{
+    display: block;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 0px;
+}
+
+.productFilter .filterContent .filterHolder ul{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.productFilter .filterContent .filterHolder ul li{
+    display: inline-block;
+    /*padding-right: 20px;*/
+    min-width: 12%;
+    max-width: 12.2%;
+    text-transform: uppercase;
+}
+.productFilter .filterContent .filterHolder ul li a.compress:after{
+    content: "+" ;
+}
+.productFilter .filterContent .filterHolder ul li a.expand.compress:after{
+    content: "-" ;
+}
+.productFilter .filterContent .filterHolder ul li:nth-child(n+2){
+    text-align: right;
+}
+.productFilter .filterContent .filterOptions{
+    display: block;
+    text-align: center;
+}
+.productFilter .filterContent .filterOptions div{
+    display: none;
 }
