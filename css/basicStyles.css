@@ -471,7 +471,9 @@ span.logoHolder.logo-icon {
     vertical-align: top;
 }
 
-
+.mobileVochure{
+    display: none;
+}
 
 
 /* Product Listing */
