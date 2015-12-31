@@ -2,6 +2,31 @@
     .sliderContainer .sliderDrive li {
         width: 25%;
     }
+    .sliderContainer .sliderDrive li a {
+        display: block;
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    .sliderContainer .sliderDrive li.active {
+        position: relative;
+        background: #ffffff;
+    }
+    .sliderContainer .sliderDrive li.active:after {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: #ffffff;
+        border-width: 12px;
+        margin-left: -12px;
+    }
 }
 
 @media only screen and (max-width: 979px) {
@@ -21,8 +46,47 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .sliderContainer .sliderDrive {
+        width: auto;
+        margin: 0px auto;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+    }
     .sliderContainer .sliderDrive li {
-        width: 25%;
+        vertical-align: middle;
+        margin: 5px;
+        width: 8px;
+        height: 8px;
+        border-radius: 2em;
+        border: 1px solid #ccc;
+    }
+    .sliderContainer .sliderDrive li a {
+        /*display: inline;*/
+        text-decoration: none;
+        color: #000;
+        text-align: center;
+        padding: 12px 0px;
+    }
+    .sliderContainer .sliderDrive li.active {
+        position: static;
+        background: #FFC001;
+        box-shadow: 0px 0px 2px #888;
+        border: 1px solid #888;
+    }
+    .sliderContainer .sliderDrive li.active:after {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: #ffffff;
+        border-width: 0px;
+        margin-left: -0px;
     }
     .productList .itemGrid .itemDetails .imgHolder .iconHolder ul li {
         margin: 5px 3px;
@@ -38,7 +102,7 @@
         margin: 0px 12px;
         margin-bottom: 24px;
     }
-    .productList .itemGrid .itemDetails .imgHolder img{
+    .productList .itemGrid .itemDetails .imgHolder img {
         display: block;
         margin: 0px auto;
     }
@@ -47,9 +111,7 @@
         background-color: transparent;
         border: transparent;
         border-radius: 0px;
-        /*outline: transparent;*/
-        margin: 10px 0px;
-        /*color: #fff;*/
+        margin: 5px 0px;
         font-size: 14px;
         color: #fff;
     }
@@ -77,10 +139,55 @@
     }
     #navbar_navHolder {
         display: none;
-        border: 1px solid #000;
-        position: static;
-        left: 0;
+        border: 1px solid #ccc;
+        position: fixed;
+        left: 13px;
         top: 0;
+        background-color: #fff;
+        z-index: 30;
+        width: 350px;
+        height: 100% !important;
+    }
+    #navbar_navHolder li>.sub-navigation {
+        display: none;
+    }
+    #navbar_navHolder li {
+        display: inline-block;
+        width: 40%;
+        border: 1px solid #000;
+        margin-right: -5px;
+        border: 1px solid #ccc;
+    }
+    #navbar_navHolder li a {
+        display: block;
+        text-decoration: none;
+        color: #555;
+    }
+    #navbar_navHolder li.active a {
+        color: #000;
+    }
+    .sliderDrive {
+        display: inline;
+        width: auto;
+        border: 1px solid #000;
+    }
+    .sliderDrive li a span {
+        display: none;
+    }
+    .headerSection .icon-wishlist.mainWishList,
+    .headerSection .addToCart.icon-cart{
+        width: 24px;
+        height: 24px;
+    }
+    .headerSection .logoContainer .searchHolder .orderQueue ul li{
+        margin: 0px 3px;
+    }
+    .headerSection .logoContainer .searchHolder{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .headerSection .logoContainer .searchHolder .orderQueue{
+        margin: 5px 0px;
     }
 }
 
@@ -91,10 +198,30 @@
     .productList:nth-child(2n+1) .productTitle b span {
         font-size: 12px;
     }
+    .headerSection .icon-wishlist.mainWishList,
+    .headerSection .addToCart.icon-cart{
+        width: 22px;
+        height: 22px;
+    }
+    .headerSection .logoContainer .searchHolder .orderQueue ul li{
+        margin: 5px 0px;
+    }
+    .headerSection .logoContainer .searchHolder{
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .headerSection .logoContainer .searchHolder .orderQueue{
+        margin: 5px 0px;
+    }
+    .headerSection .logoContainer .searchHolder .orderQueue.col-xs-2{
+        margin: 0px;
+        padding: 0px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
     .sliderContainer .sliderDrive li {
-        width: 25%;
+        /*width: 25%;*/
     }
+
 }
