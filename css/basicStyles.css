@@ -630,7 +630,7 @@ span.logoHolder.logo-icon {
 .iconHolder .icon-wishlist,
 .iconHolder .icon-cart {
     display: block;
-    opacity: 0.3;
+    opacity: 0.5;
     width: 24px;
     height: 24px;
     margin: 4px;

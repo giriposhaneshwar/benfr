@@ -2,6 +2,9 @@
     .sliderContainer .sliderDrive li {
         width: 25%;
     }
+}
+
+@media only screen and (min-width: 768px) {
     .sliderContainer .sliderDrive li a {
         display: block;
         text-decoration: none;
@@ -50,7 +53,7 @@
         font-size: 10px;
         padding: 1px 5px;
     }
-    .mobileVochure{
+    .mobileVochure {
         display: none;
     }
 }
@@ -235,51 +238,51 @@
     .headerSection .logoContainer .searchHolder .orderQueue {
         margin: 5px 0px;
     }
-    .mobileVochure{
+    .mobileVochure {
         position: absolute;
         z-index: 31;
-        top: 230px;        
+        top: 230px;
         width: 250px;
         margin: 0px auto;
         text-align: center;
     }
-    .mobileVochure .vochureDetails{
+    .mobileVochure .vochureDetails {
         display: block;
         width: 250px;
         margin: 0px auto;
         padding: 8px;
         border: 1px dashed #ccc;
     }
-    .mobileVochure span{
+    .mobileVochure span {
         display: block;
         margin: 0px 20px;
         padding: 5px;
     }
-    .mobileVochure .miniNav{
+    .mobileVochure .miniNav {
         display: block;
         margin-top: 10px;
     }
-    .mobileVochure .miniNav ul{
+    .mobileVochure .miniNav ul {
         margin: 0px;
         padding: 0px;
         list-style: none;
     }
-    .mobileVochure .miniNav ul li{
+    .mobileVochure .miniNav ul li {
         display: inline-block;
         padding: 3px 4px;
         border-right: 1px solid #ccc;
         text-transform: uppercase;
         font-size: 12px;
     }
-    .mobileVochure .miniNav ul li:last-child{
+    .mobileVochure .miniNav ul li:last-child {
         border-right: none;
     }
-    .mobileVochure .miniNav ul li a{
+    .mobileVochure .miniNav ul li a {
         display: block;
         text-decoration: none;
         color: #555;
     }
-    .mobileVochure .miniNav ul li a:hover{
+    .mobileVochure .miniNav ul li a:hover {
         color: #000;
     }
 }
