@@ -10,7 +10,7 @@ $(function(e) {
         slideMargin: 10,
         // auto: true,
         hideControlOnEnd: false,
-        infiniteLoop: true,
+        infiniteLoop: false,
         responsive: true,
         touchEnabled: true
     });
@@ -107,7 +107,13 @@ $(function(e) {
     // on Click Icon change the link color
     var iconHolder = $('.iconHolder');
     iconHolder.find('a>i').on('click', function(e) {
-        $(this).toggleClass('wished');
+        var thisEle = e.currentTarget.attributes.class.value;
+        var findThis = 'icon-search';
+
+        if (thisEle.indexOf(findThis) <= -1) {
+            $(this).toggleClass('wished');
+        }
+
     });
 
     // navigation sub menu 
@@ -138,37 +144,136 @@ $(function(e) {
 
     // Mobile navigaiton
     var wd = $(window).width();
-    if (wd < 768) {
 
-        var navBtn = $('.navbar-toggle');
-        var navContainer = $('.navHolder');
-        var navHolder = $('#navbar_navHolder');
-        var vochure = $('.mobileVochure');
+        var navBtn = $('.navbar-toggle'),
+            navContainer = $('.navHolder'),
+            navHolder = $('#navbar_navHolder'),
+            vochure = $('.mobileVochure'),
+            mobNavTrig = $('.mobNavToggle span'),
+
+            miniNav = $('.miniNav'),
+            navMenu = $('.navbar-nav'),
+            vochureDetails = $('.vochureDetails');
+
+    if (wd < 768) {
         navBtn.on('click', function() {
             $('body').addClass('popin');
             navContainer.addClass('nav_warper');
-            vochure.show();
+            // vochure.show();
         });
 
-        var navItem = navHolder.find('.navbar-nav li a');
+        $(document).ready(function(){
+            $('.collapse').on('show.bs.collapse hide.bs.collapse', function(e) {
+                e.preventDefault();
+            }); 
+            $('[data-toggle="collapse"]').on('click', function(e) {
+                e.preventDefault();
+                $($(this).data('target')).toggleClass('in');
+            });
+        });
+
+        function toggleNavTabs(e) {
+
+            if (e[0].innerText == "Shop") {
+                miniNav.hide();
+                navMenu.show();
+                vochureDetails.show();
+            } else {
+                miniNav.show();
+                navMenu.hide();
+                vochureDetails.hide();
+            }
+        }
+
+        mobNavTrig.on('click', function() {
+            var $this = $(this);
+            $this.addClass('active').siblings().removeClass('active');
+            // Mobile navigaiton Tabs
+            toggleNavTabs($this);
+        });
+
+
+
+        var navItem = navHolder.find('.navbar-nav>li>a');
 
         navItem.on('click', function() {
-            // alert(1);
             navHolder.removeClass('in');
             navHolder.attr('aria-expanded', false);
             navContainer.removeClass('nav_warper');
-            vochure.hide();
+            $('body').removeClass('popin');
         });
 
-        $(document).on('click', function(e) {
+        /*$(".navHolder").on('click', function(e){
+            // console.log("triggered navbar_navHolder", $(this));
+            if(e.target.attributes.id.value != 'navbar_navHolder'){
+
+            }else{
+                navHolder.removeClass('in');
+                $('body').removeClass('popin');
+                navHolder.attr('aria-expanded', false);
+                navContainer.removeClass('nav_warper');
+                // vochure.hide();
+            }
+        });*/
+
+       /* $(document).on('click', function(e) {
             // console.log($(e.target));
             if (!$(e.target).hasClass('navbar-collapse') && !$(e.target).hasClass('navbar-toggle')) {
                 navHolder.removeClass('in');
+                $('body').removeClass('popin');
                 navHolder.attr('aria-expanded', false);
                 navContainer.removeClass('nav_warper');
-                vochure.hide();
+                // vochure.hide();
+            }
+        });*/
+    }else{
+      navMenu.show();  
+    }
+
+    // wish list count
+    var wishListTrig = $('.iconHolder .icon-wishlist');
+    var cartListTrig = $('.iconHolder .icon-cart');
+
+    function wishList(sel) {
+        var ct = 0;
+        wishListTrig.each(function(i, n) {
+            if ($(n).hasClass('wished')) {
+                ct++;
             }
         });
+        sel.text(ct);
     }
+
+    function cartList(sel) {
+        var ct = 0;
+        cartListTrig.each(function(i, n) {
+            if ($(n).hasClass('wished')) {
+                ct++;
+            }
+        });
+        sel.text(ct);
+    }
+
+    wishListTrig.on('click', function() {
+        // console.log($(this).hasClass('wished'));
+        var wishDis = $('.mainWishList.icon-wishlist .wishCount');
+
+        if (wishDis.length != 0 || wishDis.text() != 0) {
+            wishDis.show();
+        } else {
+            wishDis.hide();
+        }
+        wishList(wishDis);
+    });
+
+    cartListTrig.on('click', function() {
+        var cartDis = $('.addToCart.icon-cart .cartCount');
+        if (cartDis.length != 0 || cartDis.text() != 0) {
+            cartDis.show();
+        } else {
+            cartDis.hide();
+        }
+        cartList(cartDis);
+    })
 
 });

@@ -1,0 +1,89 @@
+{
+    "productId": "1",
+    "productCode": "a15",
+    "barcode": "8123456",
+    "productName": "Eye Frame 1",
+    "productType": "Frame",
+    "productCategory": "Eye Glasses",
+    "categoryCode": "g15",
+    "modelName": "OOX3133 02 53",
+    "modelCode": "br10f",
+    "description": "Frame with color of brown and edges with rounded corners.",
+    "frameMaterialName": "Fiber",
+    "materialCode": "dg10mx",
+    "brandName": "Ray-Ban",
+    "brandCode": "ray2015jan",
+    "noseBridgeSize": "10mm",
+    "weight": "50gr",
+    "weightGroup": "Medium Weight",
+    "frameWidth": 128.5,
+    "armLength": 58.5,
+    "lensDiameter": "28mm",
+    "frameDepth": "5mm",
+    "frameColor": [
+        "Black Blue$rayban/blackblue_1.jpg",
+        "Blue Grey$rayban/bluegrey_1.jpg"
+    ],
+    "frameType": "Rimless",
+    "frameShape": "Rounded",
+    "gender": [
+        "male",
+        "female",
+        "unisex"
+    ],
+    "ageRange": [
+        "0-10",
+        "10-20",
+        "20-30",
+        "30-40",
+        "40-50",
+        "50-60",
+        "60-70",
+        "70-80",
+        "80-90"
+    ],
+    "style": "Aviator",
+    "templeSize": 11.4,
+    "templeColor": [
+        "Blue",
+        "Grey"
+    ],
+    "templeMaterialName": "Plastic",
+    "lensMaterialName": "Glass",
+    "lensTech": "UV Protection",
+    "lensType": "Bi-Focal",
+    "lensColor": [
+        "Brown",
+        "White"
+    ],
+    "lensPower": 5.5,
+    "size": [
+        "1",
+        "2",
+        "3",
+        "4"
+    ],
+    "eyeSize": 12.5,
+    "isImported": true,
+    "listPrice": 1350.20,
+    "netPrice": 1230.80,
+    "discount": 5.3,
+    "packageQuantity": 20,
+    "disposability": "Monthly",
+    "expiry": "2015-04-15T10:30:09.7552052Z",
+    "prescriptionType": "string",
+    "frameStyleSecondary": "Oval",
+    "ageGroup": "Adult",
+    "tryAtHome": true,
+    "virtual3d": true,
+    "faceType": "Narrow",
+    "workType": "Outdoor",
+    "productImage": "bluegrey_1.jpg",
+    "imageName": "bluegrey_1",
+    "thumbImage": "bluegrey_1_tb",
+    "homeImage": "bluegrey.jpg",
+    "tags": [
+        "Blue", "Grey", "Rounded", "Glasses",
+        "Bi-Focal", "Single Vision", "Ray-Ban"
+    ]
+}

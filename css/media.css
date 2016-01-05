@@ -53,8 +53,23 @@
         font-size: 10px;
         padding: 1px 5px;
     }
-    .mobileVochure {
+    .mobNavToggle {
         display: none;
+        text-align: center;
+        margin-top: 15px;
+    }
+    .mobNavToggle span {
+        display: inline-block;
+        padding: 8px 15px;
+        border: 1px solid #ccc;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 0px 5px;
+    }
+    .mobNavToggle span.active {
+        background-color: #303030;
+        color: #fff;
+        border-color: #000
     }
 }
 
@@ -62,6 +77,10 @@
     body.popin {
         display: block;
         position: fixed;
+    }
+    .mobileVochure,
+    .mobNavToggle {
+        display: block;
     }
     .sliderContainer .sliderDrive {
         width: auto;
@@ -76,7 +95,7 @@
         width: 8px;
         height: 8px;
         border-radius: 2em;
-        border: 1px solid #ccc;
+        /*border: 1px solid #ccc;*/
     }
     .sliderContainer .sliderDrive li a {
         /*display: inline;*/
@@ -88,8 +107,8 @@
     .sliderContainer .sliderDrive li.active {
         position: static;
         background: #FFC001;
-        box-shadow: 0px 0px 2px #888;
-        border: 1px solid #888;
+        /*box-shadow: 0px 0px 2px #888;*/
+        /*border: 1px solid #888;*/
     }
     .sliderContainer .sliderDrive li.active:after {
         bottom: 100%;
@@ -151,8 +170,8 @@
     .navHolder {}
     .navbar-nav {
         text-align: center;
-        /* border: 1px solid #ccc; */
-        margin-top: 40px;
+        margin: 0px;
+        margin-top: 15px;
     }
     .navbar-default .navbar-toggle {
         border-color: transparent;
@@ -177,12 +196,13 @@
         top: 0;
         background-color: #F7F7F7;
         z-index: 30;
-        width: 350px;
+        width: 250px;
         height: 100% !important;
+        padding: 0px;
     }
     .nav_warper {
         position: absolute !important;
-        z-index: 30;
+        z-index: 9999;
         background-color: rgba(0, 0, 0, 0.5);
         left: 0;
         top: 0;
@@ -194,7 +214,7 @@
     }
     #navbar_navHolder li {
         display: inline-block;
-        width: 40%;
+        width: 45%;
         border: 1px solid #000;
         margin-right: -5px;
         margin-bottom: -1px;
@@ -239,51 +259,104 @@
         margin: 5px 0px;
     }
     .mobileVochure {
-        position: absolute;
-        z-index: 31;
-        top: 230px;
-        width: 250px;
+        /* position: absolute; */
+        /* z-index: 31; */
+        /* top: 230px; */
+        width: 220px;
         margin: 0px auto;
         text-align: center;
+        left: 3px;
+        /* right:  50%; */
     }
     .mobileVochure .vochureDetails {
         display: block;
-        width: 250px;
+        width: 100%;
         margin: 0px auto;
         padding: 8px;
-        border: 1px dashed #ccc;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        margin-left: 2px;
     }
     .mobileVochure span {
         display: block;
-        margin: 0px 20px;
+        margin: 0px 5px;
         padding: 5px;
     }
+    .mobileVochure span:first-child {
+        border: 1px dashed #ccc;
+        margin: 10px 15px;
+    }
     .mobileVochure .miniNav {
-        display: block;
+        display: none;
         margin-top: 10px;
+        width: 100%;
     }
     .mobileVochure .miniNav ul {
         margin: 0px;
         padding: 0px;
         list-style: none;
+        width: 100%;
     }
     .mobileVochure .miniNav ul li {
-        display: inline-block;
-        padding: 3px 4px;
-        border-right: 1px solid #ccc;
-        text-transform: uppercase;
-        font-size: 12px;
+        display: block;
+        width: 82% !important;
     }
-    .mobileVochure .miniNav ul li:last-child {
-        border-right: none;
+    .headerSection .addToCart.icon-cart .cartCount,
+    .headerSection .icon-wishlist.mainWishList .wishCount {
+        display: none;
+        position: absolute;
+        border-radius: 2em;
+        text-align: center;
+        line-height: 12px;
+        background-color: #FFC001;
+        text-decoration: none;
+        padding: 1px 3px;
+        font-size: 9px !important;
+        color: #000;
+        right: -4px;
+        top: -8px;
+        font-style: normal;
     }
-    .mobileVochure .miniNav ul li a {
+    .navbar-default .navbar-nav>li>a:focus,
+    .navbar-default .navbar-nav>li>a:hover {
+        color: #555;
+        border-top: none;
+    }
+
+    .mobileSecondaryNav {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+    .mobileSecondaryNav ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    .mobileSecondaryNav>ul>li {
+        display: block;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-right: -1px;
+        margin-bottom: -1px;
+    }
+    .mobileSecondaryNav ul li a {
         display: block;
         text-decoration: none;
         color: #555;
+        text-transform: uppercase;
+        padding: 8px 0px;
+        font-size: 12px;
     }
-    .mobileVochure .miniNav ul li a:hover {
+    .mobileSecondaryNav ul li a:hover {
         color: #000;
+    }
+    .productList {
+        display: block;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+        padding-bottom: 63px;
     }
 }
 

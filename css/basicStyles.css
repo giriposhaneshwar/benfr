@@ -64,6 +64,9 @@ div {
 .headerSection .logoContainer {
     display: block;
     border-bottom: 1px solid #efefef;
+}
+
+.headerSection .topMiniNav {
     padding-top: 8px;
 }
 
@@ -172,10 +175,34 @@ span.logoHolder.logo-icon {
 
 */
 
-.headerSection .navHolder ul > li.active a,
+
+/*.headerSection .navHolder ul > li.active a,*/
+
 .headerSection .navHolder ul > li a:hover,
 .headerSection .navHolder .toRed a {
-    color: #c00;
+    /*color: #c00;*/
+    /*color: #000;*/
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-weight: 600;
+}
+
+.navbar-default .navbar-nav>.active>a {
+    color: #777;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: #555;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    border-top: 2px solid #555;
+}
+
+.mobNavToggle {
+    display: none;
 }
 
 .navbar {
@@ -200,7 +227,6 @@ span.logoHolder.logo-icon {
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
     background-color: transparent;
-    color: #c00;
 }
 
 .headerSection .navHolder {
@@ -295,6 +321,7 @@ span.logoHolder.logo-icon {
     display: block;
     text-decoration: none;
     color: #555;
+    font-size: 12px;
 }
 
 .headerSection .navHolder li:hover .sub-navigation .sub-nav-container .subNavItemList ul li span {
@@ -370,6 +397,7 @@ span.logoHolder.logo-icon {
     width: 32px;
     height: 32px;
     background-size: contain;
+    position: relative;
 }
 
 .headerSection .icon-wishlist.mainWishList {
@@ -377,6 +405,23 @@ span.logoHolder.logo-icon {
     width: 32px;
     height: 32px;
     background-size: contain;
+    position: relative;
+}
+
+.headerSection .addToCart.icon-cart .cartCount,
+.headerSection .icon-wishlist.mainWishList .wishCount {
+    display: none;
+    position: absolute;
+    border-radius: 2em;
+    text-align: center;
+    line-height: 12px;
+    background-color: #FFC001;
+    text-decoration: none;
+    padding: 2px 5px;
+    font-size: 12px;
+    color: #000;
+    right: -4px;
+    top: -8px;
 }
 
 
@@ -451,12 +496,14 @@ span.logoHolder.logo-icon {
     list-style: none;
     background-color: #ccc;
 }
-.sliderContainer .sliderHolder{
+
+.sliderContainer .sliderHolder {
     overflow: hidden;
     /*height: 100%;*/
     position: relative;
 }
-.sliderContainer .sliderHolder img{
+
+.sliderContainer .sliderHolder img {
     /*float: left;*/
     position: absolute;
 }
@@ -471,7 +518,7 @@ span.logoHolder.logo-icon {
     vertical-align: top;
 }
 
-.mobileVochure{
+.mobileVochure {
     display: none;
 }
 
@@ -480,12 +527,55 @@ span.logoHolder.logo-icon {
 
 .productList {
     display: block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    /*border: 1px solid #000; */
+}
+
+.productList .viewAll {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.productList .viewAll a {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 16px 94px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.productList .viewAll a:hover {
+    box-shadow: 0px 0px 2px #888;
+}
+
+.productList .slideViewAll {
+    display: block;
+    margin-top: 0px;
+}
+
+.productList .slideViewAll a {
+    display: block;
+    padding: 50px 0px;
+    text-align: center;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #000;
+}
+
+.productList .slideViewAll.kids a {
+    padding: 120px 0px;
 }
 
 .productList .productTitle {
     display: block;
     border-top: 1px solid #ccc;
-    margin-top: 80px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -530,6 +620,13 @@ span.logoHolder.logo-icon {
 .productList .itemGrid .itemDetails .imgHolder {
     display: block;
     position: relative;
+    text-align: center;
+}
+
+.productList .itemGrid .itemDetails .imgHolder img {
+    display: block;
+    margin: 0px auto;
+    border: 1px solid #ccc;
 }
 
 .productList .itemGrid .itemDetails .imgHolder .iconHolder {
