@@ -604,6 +604,7 @@ span.logoHolder.logo-icon {
 .productList .productItemHolder {
     display: block;
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 .productList .productItemHolder .itemGrid {
@@ -614,7 +615,7 @@ span.logoHolder.logo-icon {
 .productList .productItemHolder .itemGrid .itemDetails {
     display: block;
     margin: 0px 48px;
-    margin-bottom: 96px;
+    margin-bottom: 30px;
 }
 
 .productList .itemGrid .itemDetails .imgHolder {
@@ -626,7 +627,6 @@ span.logoHolder.logo-icon {
 .productList .itemGrid .itemDetails .imgHolder img {
     display: block;
     margin: 0px auto;
-    border: 1px solid #ccc;
 }
 
 .productList .itemGrid .itemDetails .imgHolder .iconHolder {
@@ -704,7 +704,7 @@ span.logoHolder.logo-icon {
 }
 
 .productList .itemGrid .itemDetails .imgHolder .iconHolder ul li i.wished {
-    background-color: #f60;
+    background-color: #FFC001;
     opacity: 1;
 }
 

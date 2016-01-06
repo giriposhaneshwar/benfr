@@ -24,9 +24,14 @@ $(function(e) {
 
 
     $(window).on('load ready resize', function() {
-        imgSlider.find('img').width($(document).width());
+        var docWid = $(document).width();
+        imgSlider.find('img').width(docWid);
         imgSlider.css('overflow', 'hidden');
         imgSlider.height(imgSlider.find('img').height());
+
+        // grid image size is resetted
+        var gridImg = $('.gridBanner');
+        gridImg.width(docWid);
     });
 
     sliderDrive.find('li').on('click', function() {
